@@ -1,0 +1,249 @@
+body{
+    background-color: rgb(0, 166, 255);
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    background-color: rgb(9, 9, 9);
+    box-shadow: .1em .1em 1em rgba(0, 0, 0, 0.256);
+    height: 90vh;
+    width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    border-radius: 1em;
+    transition: 1s;
+    animation: cont 5s infinite linear;
+}
+
+/* @keyframes cont {
+    from{transform: scale(1.0);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1.0);}
+} */
+
+.outOf h6{
+    font-weight: 900;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    padding-top: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.roller {
+    box-shadow: .1em .1em 1em rgba(0, 0, 0, 0.539);
+    object-fit: fill;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10em;
+    width: 10em;
+    background-color: white;
+    border-radius: 100%;
+    animation: roller 5s infinite linear;
+}
+
+.disk{
+    border-radius: 10em;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: black;
+    position: absolute;
+    z-index: 100;
+    transform: translateX(135px) translateY(75px);
+}
+
+.roller img{
+    position: relative;
+    object-fit: cover;
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+}
+
+@keyframes roller {
+    from{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.music{
+    text-align: center;
+}
+
+.music .musicName{
+    font-weight: 900;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.music .artist{
+    color: rgba(255, 255, 255, 0.829);
+    font-style: italic;
+}
+
+
+/* music duration */
+.musicDurations .content{
+    margin-top: 1em;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.musicDurations input{
+    height: .2em;
+    width: 60%;
+    transform: translateY(-5px);
+    margin: 1em;
+    appearance: none;
+    background: blue;
+    cursor: pointer;
+    transition: .4s;
+
+}
+
+.musicDurations input::-webkit-slider-thumb{
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 100%;
+    border: 3px solid blue;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+/* music volume */
+.musicVolume{
+    margin-top: 1em;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+}
+
+.musicVolume input{
+    height: .2em;
+    display: block;
+    transform: rotate(90deg) translateY(45px);
+    margin-top: 4em;
+}
+
+.musicVolume span:nth-child(2){
+    position: absolute;
+    transform: translateY(-26px) translateX(10px);
+    margin-left: .3em;
+}
+
+.musicVolume span:nth-child(1){
+    position: absolute;
+    transform: translateY(130px) translateX(10px);
+    margin-left: .3em;
+}
+
+.musicVolume i{
+    transition: .4s;
+    font-size: .8em;
+    color: rgba(255, 255, 255, 0.623);
+}
+
+.musicVolume i:hover,.musicControllers i:hover{
+    cursor: pointer;
+    transition: .4s;
+    color: rgba(255, 255, 255, 0.984);
+}
+
+.musicVolume i:active{
+    transition: .4s;
+    background-color: whitesmoke;
+    border-radius: 10em;
+    padding: .5em;
+}
+
+
+/* music controllers */
+.musicControllers i{
+    color: rgba(255, 255, 255, 0.671);
+    transition: .4s;
+    font-size: 1.2em;
+}
+
+.musicControllers .d-flex{
+    margin-top: 1.5em;
+    justify-content: space-evenly;
+}
+
+#play{
+    background-color: white;
+    color: black;
+    padding: .8em;
+    transform: translateY(-15px);
+    border-radius: 10em;
+}
+
+#play:hover{
+    background-color: rgba(0, 102, 255, 0.468);
+    color: white;
+}
+
+
+/* music wave */
+.musicWave {
+    width: 100%;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.musicWave .wave{
+    display: inline-flex;
+    /* height: 4em; */
+    background-color: white;
+    width: 2%;
+    border-radius: 4em;
+    margin: .1em;
+    animation: wave 1.5s infinite linear;
+}
+
+.wave:nth-child(1){
+    animation-delay: .3s;
+}
+
+.wave:nth-child(2){
+    animation-delay: .9s;
+}
+
+.wave:nth-child(3){
+    animation-delay: 1s;
+}
+
+.wave:nth-child(4){
+    animation-delay: 1.3s;
+}
+
+.wave:nth-child(5){
+    animation-delay: 1s;
+}
+
+.wave:nth-child(6){
+    animation-delay: .9s;
+}
+
+.wave:nth-child(7){
+    animation-delay: .3s;
+}
+
+@keyframes wave {
+    from{height: 4em;background-color: rgb(177, 15, 15);}
+    20%{height: 1.5em;background-color: rgb(15, 177, 101);}
+    40%{height: 2em;background-color: rgb(56, 15, 177);}
+    50%{height: 2.5em;background-color: white;}
+    70%{height: 3em;background-color: rgb(177, 15, 169);}
+    90%{height: 3.5em;background-color: rgb(177, 126, 15);}
+    100%{height: 4em;background-color: rgb(23, 85, 241);}
+}
