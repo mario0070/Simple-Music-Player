@@ -9,6 +9,8 @@ var audio = document.getElementById("audio")
 var play = document.getElementById("play")
 var next = document.getElementById("next")
 var prev = document.getElementById("prev")
+var wave = document.getElementById("wave")
+var roller = document.getElementById("roller")
 
 var list = [
     {
@@ -43,7 +45,7 @@ function updatePlayer(){
     musicNames.innerHTML = song.musicName
     artist.innerText = song.artist
     img.src = song.image
-    outOf.innerHTML =  `Playing Music ${curr_index} of ${list.length}`
+    outOf.innerHTML =  `Playing Music ${curr_index + 1} of ${list.length}`
     audio.src = song.music
 }
 
@@ -52,10 +54,14 @@ function playSong(){
         audio.play()
         play.classList.add("fa-pause")
         play.classList.remove("fa-play")
+        wave.classList.add("valid")
+        roller.classList.toggle("valid")
     }else{
         audio.pause()
         play.classList.remove("fa-pause")
         play.classList.add("fa-play")
+        wave.classList.remove("valid")
+        roller.classList.remove("valid")
     }
 }
 
@@ -72,8 +78,6 @@ function changeMusic(next=true){
         if(next_index > list.length - 1){
             next_index = 0
         }
-        playSong()
-    updatePlayer()
 
     }else{
         curr_index --;
@@ -84,11 +88,8 @@ function changeMusic(next=true){
             next_index = 0
         }
 
-        playSong()
-    updatePlayer()
-
     }
 
-    // playSong()
-    // updatePlayer()
+    playSong()
+    updatePlayer()
 }

@@ -44,7 +44,13 @@ body{
     width: 10em;
     background-color: white;
     border-radius: 100%;
-    animation: roller 5s infinite linear;
+    transition: .4s;
+    /* animation: roller 5s infinite linear; */
+}
+
+#roller.valid{
+     animation: roller 10s infinite linear;
+     transition: .4s;
 }
 
 .disk{
@@ -198,6 +204,14 @@ body{
     width: 100%;
     margin-top: 3em;
     text-align: center;
+    transition: .4s;
+    height: 4em;
+    opacity: .0;
+}
+
+#wave.valid{
+    transition: .4s;
+    opacity: 1.0;
 }
 
 .musicWave .wave{
@@ -247,3 +261,4 @@ body{
     90%{height: 3.5em;background-color: rgb(177, 126, 15);}
     100%{height: 4em;background-color: rgb(23, 85, 241);}
 }
+
