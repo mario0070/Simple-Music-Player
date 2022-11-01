@@ -9,7 +9,6 @@ var audio = document.getElementById("audio")
 var play = document.getElementById("play")
 var next = document.getElementById("next")
 var prev = document.getElementById("prev")
-// var wave = document.getElementById("wave")
 var roller = document.getElementById("roller")
 var wave1 = document.getElementById("wave1")
 var wave2 = document.getElementById("wave2")
@@ -35,7 +34,7 @@ var list = [
 ]
 
 play.addEventListener("click",playSong)
-next.addEventListener("click",changeMusic)
+next.addEventListener("click",()=>changeMusic())
 prev.addEventListener("click",()=>changeMusic(false))
 
 initPlayer()
@@ -82,10 +81,11 @@ function playSong(){
         wave6.classList.remove("valid")
         wave7.classList.remove("valid")
     }
+
 }
 
 function changeMusic(next=true){
-    if(next){
+    if(next && audio.paused){
         curr_index ++;
         next_index = curr_index + 1
 
@@ -96,9 +96,10 @@ function changeMusic(next=true){
 
         if(next_index > list.length - 1){
             next_index = 0
-        }
+        } 
 
-    }else{
+    }
+    else{
         curr_index --;
         next_index = curr_index + 1
 

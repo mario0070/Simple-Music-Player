@@ -20,7 +20,7 @@
     <div class="container">
         <div class="body">
 
-            <audio src="" id="audio"></audio>
+            <!-- <audio src="" id="audio"></audio> -->
 
             <div class="outOf text-center">
                 <h6 id="outOf">Playing Music 1 of x</h6>
@@ -30,7 +30,7 @@
                 <div class="content d-flex">
                     <span class="vlDown"><i class="fa-solid fa-volume-low"></i></span>
                     <span class="vlUp"><i class="fa-solid fa-volume-high"></i></span>
-                    <input type="range" name="" id="">
+                    <input type="range" name="" id="volume_slider" onchange="setVolume()" value="100">
                     
                 </div>
             </div>
@@ -47,7 +47,7 @@
             <div class="musicDurations">
                 <div class="content">
                     <span class="startTime" id="startTime">00:00</span>
-                    <input type="range" name="" id="range" value="79">
+                    <input type="range" name="" id="range" value="79" onchange="seekTo()">
                     <span class="endTime" id="endTime">03:00</span>
                 </div>
             </div>
@@ -55,11 +55,13 @@
             <div class="musicControllers">
                 <div class="d-flex">
                     <!-- <i class="fa-solid fa-pause"></i> -->
-                    <i class="fa-solid fa-shuffle" title="Shuffle"></i>
-                    <i class="fa-solid fa-backward" title="Previous" id="prev"></i>
-                    <i class="fa-solid fa-play" id="play" title="Play / Pause"></i>
-                    <i class="fa-solid fa-forward" title="Next" id="next"></i>
-                    <i class="fa-solid fa-repeat" title="Repeat"></i>
+                    <i class="fa-solid fa-shuffle" title="Shuffle" onclick="randomTrack()"></i>
+                    <i class="fa-solid fa-backward" title="Previous" id="prev" onclick="prevTrack()"></i>
+                    <div class="play" id="play" title="Play / Pause" onclick="playPauseTrack()">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <i class="fa-solid fa-forward" title="Next" id="next" onclick="nextTrack()"></i>
+                    <i class="fa-solid fa-repeat" title="Repeat" onclick="repeatTrack()"></i>
                 </div>
             </div>
 
@@ -82,7 +84,7 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="text.js"></script>
 
     <script>
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
