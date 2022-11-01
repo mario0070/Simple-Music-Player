@@ -8,7 +8,7 @@ body{
     position: relative;
     background-color: rgb(9, 9, 9);
     box-shadow: .1em .1em 1em rgba(0, 0, 0, 0.256);
-    height: 90vh;
+    height: 35em;
     width: 20em;
     margin-left: auto;
     margin-right: auto;
@@ -29,7 +29,7 @@ body{
     font-size: 1em;
     text-align: center;
     color: white;
-    padding-top: 1em;
+    padding-top: 2em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -44,8 +44,7 @@ body{
     width: 10em;
     background-color: white;
     border-radius: 100%;
-    transition: .4s;
-    /* animation: roller 5s infinite linear; */
+    transition: .4s; 
 }
 
 #roller.valid{
@@ -103,9 +102,10 @@ body{
 
 .musicDurations input{
     height: .2em;
-    width: 60%;
+    width: 50%;
     transform: translateY(-5px);
-    margin: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
     appearance: none;
     background: blue;
     cursor: pointer;
@@ -113,7 +113,7 @@ body{
 
 }
 
-.musicDurations input::-webkit-slider-thumb{
+.musicDurations input::slider-thumb{
     appearance: none;
     height: 20px;
     width: 20px;
@@ -205,60 +205,119 @@ body{
     margin-top: 3em;
     text-align: center;
     transition: .4s;
-    height: 4em;
-    opacity: .0;
-}
-
-#wave.valid{
-    transition: .4s;
-    opacity: 1.0;
 }
 
 .musicWave .wave{
     display: inline-flex;
-    /* height: 4em; */
     background-color: white;
-    width: 2%;
+    width: 1%;
     border-radius: 4em;
-    margin: .1em;
-    animation: wave 1.5s infinite linear;
+    transition: .5s;
 }
 
 .wave:nth-child(1){
-    animation-delay: .3s;
+    height: 4em;
+    background-color: rgb(0, 191, 255);
 }
 
 .wave:nth-child(2){
-    animation-delay: .9s;
+    height: 2em;
+    background-color: rgb(255, 140, 0);
 }
 
 .wave:nth-child(3){
-    animation-delay: 1s;
+    height: 1em;
+    background-color: rgb(128, 92, 0);
 }
 
 .wave:nth-child(4){
-    animation-delay: 1.3s;
+    height: .5em;
 }
 
 .wave:nth-child(5){
-    animation-delay: 1s;
+    height: 1em;
+    background-color: rgb(128, 92, 0);
 }
 
 .wave:nth-child(6){
-    animation-delay: .9s;
+    height: 2em;
+    background-color: rgb(255, 140, 0);
 }
 
 .wave:nth-child(7){
-    animation-delay: .3s;
+    height: 4em;
+    background-color: rgb(0, 191, 255);
 }
 
-@keyframes wave {
-    from{height: 4em;background-color: rgb(177, 15, 15);}
-    20%{height: 1.5em;background-color: rgb(15, 177, 101);}
-    40%{height: 2em;background-color: rgb(56, 15, 177);}
-    50%{height: 2.5em;background-color: white;}
-    70%{height: 3em;background-color: rgb(177, 15, 169);}
-    90%{height: 3.5em;background-color: rgb(177, 126, 15);}
-    100%{height: 4em;background-color: rgb(23, 85, 241);}
+#wave1.valid,
+#wave7.valid
+{
+    animation: wave1 1.5s infinite linear;
 }
 
+#wave2.valid,
+#wave6.valid
+{
+    animation: wave2 1s infinite linear;
+}
+
+#wave3.valid,
+#wave5.valid
+{
+    animation: wave3 1.5s infinite linear;
+}
+
+@keyframes wave1 {
+    from{height: 1em;background-color: rgb(0, 191, 255);}
+    50%{height: 4em;background-color: rgb(255, 140, 0);}
+    100%{height: 1em;background-color: rgb(128, 92, 0);}
+}
+
+@keyframes wave2 {
+    from{height: .5em;background-color: rgb(128, 92, 0);}
+    50%{height: 2em;background-color: rgb(255, 140, 0);}
+    100%{height: .5em;background-color: rgb(0, 191, 255);}
+}
+
+@keyframes wave3 {
+    from{height: .3em;background-color: rgb(128, 92, 0);}
+    50%{height: 3em;background-color: rgb(0, 191, 255);}
+    100%{height: .3em;background-color: rgb(255, 140, 0);}
+}
+
+
+
+@media screen and (min-width:600px) {
+
+    /* music duration */
+.musicDurations .content{
+    margin-top: 1em;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.musicDurations input{
+    height: .2em;
+    width: 60%;
+    transform: translateY(-5px);
+    margin: 1em;
+    appearance: none;
+    background: blue;
+    cursor: pointer;
+    transition: .4s;
+
+}
+
+.musicDurations input::-webkit-slider-thumb{
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 100%;
+    border: 3px solid blue;
+    cursor: pointer;
+    transition: .5s;
+}
+    
+}
