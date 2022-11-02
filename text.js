@@ -19,6 +19,7 @@ var audio = document.getElementById("audio")
 var play = document.getElementById("play")
 var next = document.getElementById("next")
 var roller = document.getElementById("roller")
+var body = document.getElementById("body")
 
 var prev = document.getElementById("prev")
 var roller = document.getElementById("roller")
@@ -178,6 +179,7 @@ function playTrack(){
     wave5.classList.add("valid")
     wave6.classList.add("valid")
     wave7.classList.add("valid")
+    body.classList.add("valid")
 }
 
 function pauseTrack(){
@@ -193,6 +195,7 @@ function pauseTrack(){
     wave5.classList.remove("valid")
     wave6.classList.remove("valid")
     wave7.classList.remove("valid")
+    body.classList.remove("valid")
 }
 
 function nextTrack() {
@@ -248,3 +251,9 @@ function setUpdate(){
         endTime.textContent = durationMinutes + ':' + durationMinutes
     }
 }
+
+var shuffle = document.getElementById("shuffle")
+shuffle.addEventListener("click",()=>{
+    shuffle.classList.toggle("valid")
+
+})

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="body">
 
    <div class="body">
     <div class="container">
@@ -36,7 +36,7 @@
             </div>
             <div class="disk"></div>
             <div class="roller text-center" id="roller">
-                <img src="" alt="img" id="img">
+                <img src="" alt="img" id="img" loading="lazy">
             </div>
 
             <div class="music">
@@ -55,7 +55,7 @@
             <div class="musicControllers">
                 <div class="d-flex">
                     <!-- <i class="fa-solid fa-pause"></i> -->
-                    <i class="fa-solid fa-shuffle" title="Shuffle" onclick="randomTrack()"></i>
+                    <i class="fa-solid fa-shuffle" title="Shuffle" id="shuffle" onclick="randomTrack()"></i>
                     <i class="fa-solid fa-backward" title="Previous" id="prev" onclick="prevTrack()"></i>
                     <div class="play" id="play" title="Play / Pause" onclick="playPauseTrack()">
                         <i class="fa-solid fa-play"></i>
