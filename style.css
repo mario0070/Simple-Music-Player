@@ -1,8 +1,7 @@
 body{
-    background:  linear-gradient(567deg, rgba(165, 42, 4, 0.89), rgba(113, 102, 8, 0.89), rgba(13, 95, 16, 0.93), rgba(4, 79, 88, 0.94), rgba(19, 56, 86, 0.9), rgba(24, 32, 78, 0.94), rgba(100, 8, 115, 0.95));
+    background: rgb(222, 88, 5);
     margin: 0;
     padding: 0;
-    background-attachment: fixed;
 }
 
 body.valid{
@@ -376,6 +375,13 @@ body.valid{
     border: 3px solid rgb(0, 140, 255);
     cursor: pointer;
     transition: .5s;
+}
+
+body{
+    background:  linear-gradient(567deg, rgba(165, 42, 4, 0.89), rgba(113, 102, 8, 0.89), rgba(13, 95, 16, 0.93), rgba(4, 79, 88, 0.94), rgba(19, 56, 86, 0.9), rgba(24, 32, 78, 0.94), rgba(100, 8, 115, 0.95));
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
 }
     
 }
