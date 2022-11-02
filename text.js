@@ -37,61 +37,61 @@ var list = [
     {
         artist : "Asake",
         music : "music/song1.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/asake2.jpeg",
         musicName : "Joha"
     },
     {
         artist : "Asake",
         music : "music/song2.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/download (2).jpeg",
         musicName : "Kanipe"
     },
     {
         artist : "Bella Shmurdha",
         music : "music/song3.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/bella1.jpeg",
         musicName : "Loose it"
     },
     {
         artist : "Asake",
         music : "music/song4.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/asake3.jpeg",
         musicName : "Yanyan"
     },
     {
         artist : "Asake",
         music : "music/song5.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/asake4.jpeg",
         musicName : "Organise"
     },
     {
         artist : "Wizkid",
         music : "music/song6.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/wizkid1.jpeg",
         musicName : "Joro"
     },
     {
         artist : "Wizkid",
         music : "music/song10.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/wizkid2.jpeg",
         musicName : "Reckless"
     },
     {
         artist : "Wizkid",
         music : "music/song9.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/wizkid3.jpeg",
         musicName : "Picture_Perfect"
     },
     {
         artist : "Wizkid",
         music : "music/song8.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/wizkid4.jpeg",
         musicName : "Matser Groove"
     },
     {
         artist : "Wizkid",
         music : "music/song7.mp3",
-        image : "image/IMG_0037.jpeg",
+        image : "image/wizkid5.jpeg",
         musicName : "Fever"
     }
 ]
