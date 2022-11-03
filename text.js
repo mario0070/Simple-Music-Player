@@ -257,3 +257,17 @@ shuffle.addEventListener("click",()=>{
     shuffle.classList.toggle("valid")
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
