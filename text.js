@@ -113,29 +113,7 @@ function loadTrack(track_index){
     updateTimer = setInterval(setUpdate , 1000)
  
     curr_track.addEventListener("ended",nextTrack)
-    random_bg()
     
-}
-
-function random_bg(){
-    let  hex = ['0','1','2','3','4','5','6','7','8','9','a','b','c','c','d','e']
-    let a;
-
-    function populate(a){
-        for(var i = 0 ; i < 6 ; i++){
-            let x = Math.random(Math.round()*14)
-            let y = hex[x]
-            a += y;
-        }
-        return a
-    }
-
-    let color1 = populate('#')
-    let color2 = populate('#')
-    let angle = 'to right'
-
-    let gradient =  'linear-gradient(' + angle + ',' + color1 + ',' + color2 + ')';
-    document.body.style.background= gradient;
 }
 
 function reset(){
@@ -261,13 +239,6 @@ shuffle.addEventListener("click",()=>{
 
 
 
-
-
-
-
-
-
-
-
-
-
+var jm = fetch("")
+.then(res => res.json()).then(req => console.log(req))
+console.log(jm)
